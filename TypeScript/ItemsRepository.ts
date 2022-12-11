@@ -1,4 +1,7 @@
-export default interface ItemsRepository {
+import Item from "./items/Item";
 
-    // getInventory() : Item;
+export default interface ItemsRepository {
+    getInventory(): Item[];
+    findItem(status, quality):Item;
+    saveInventory(items : Item[]): void;
 }
